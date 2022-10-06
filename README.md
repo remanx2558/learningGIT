@@ -54,3 +54,96 @@ d.git add file_name
 
 
 
+********************************************************************************************************************************************************
+********************************************************************************************************************************************************
+
+
+touch : create file
+ls : listing files in folder : -a:address exact       -l:location in time
+rm : files
+rmdir: directories
+cp:file
+cp -r:recursively: directory
+mv: just works
+
+
+git config --list
+git config --global user.name "yashwant"
+
+git add period(.) sign
+
+
+git status:staging
+git log:commits
+
+
+git log --online : check previous cmmits with commit ID
+git show comment_id : used with git 
+git reflog: show every operation on every branch but git log is specific to a branch and by git reset histry can be lost but not for git reflog
+
+git rebase vs git merge: merge (new commit created at the end ) rebase(just all changes added in last commit ) :adv(looks neat comits):disadv(bramch-branhc-branch : then rebasing becomes complex and headache)
+
+
+press I-->edit-->Esc--->":wq enter": save and quit  text file
+
+
+git create branch_name
+git checkut branch_name
+git checkout -b branch_name: create branch -> switch it: b :before create it
+
+git branch -d branch_name: delete : condition commits should merged
+git branch -D branch_name: forced Deletion
+
+
+//existing project
+must have a project locally and remote repository 
+git init (in local project)
+git add .
+git commit -m "random_comment"
+git remote add origin <remote_URL>
+git push origin master(master here is branch name:can be anything)
+(origin variable store remote_url)
+
+git remote (return variables which stores remote_url: origin here)
+
+git remote -v (tell content of origin too)
+
+git remote add origin_new_name <remote_URL>
+
+
+//fetch changes : remote repo-->local repo --> working directory(stage skip)
+
+git fetch (master (remote)---> origin/master(local)) (remote-->local repo)
+git merge origin/master(from which remote and branchyou want to fetch changes to working directory)(local repo-->working direc)
+
+
+git pull==fetch+merge
+
+git pull origin master
+
+index.html
+
+
+git clean --f -d : Command for cleaning working repositories(f:force d:delete recursively)
+
+git commit --amend -:Command for changing message of the previous commit , also for content of last commit
+
+
+git checkout commit_id: move head to this
+git switch -->   - To get back to last commit
+
+
+
+//
+git reset commit_id : go to some previous commit and delete next all commits :code just get unstaged
+
+git reset commit_id --hard  : delete commit+code
+
+
+//
+git revert commit_id: revert+commit
+git revert commit_id -n: just revert ---> you commit explicitly
+
+
+//see rever + abort
+
